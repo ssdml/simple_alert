@@ -26,7 +26,7 @@ class AlertWindow(QWidget):
         self.resize(self.width, self.height)
         self.move(screenSize.width() - self.width, screenSize.height() - self.height - 50)
         self.setWindowTitle('Перерыв')
-        self.setStyleSheet("background-color: #00ced1")
+        self.setStyleSheet("background-color: #f16d95")
 
         self.font = QFont("Calibri", 14, QFont.Bold) 
         self.initLabel()
@@ -46,7 +46,7 @@ class AlertWindow(QWidget):
         self.btn.setFont(self.font)
         self.btn.resize(self.width - 40, 30)
         self.btn.move(20, int(self.height / 2 + 10))
-        self.btn.setStyleSheet("background-color: #cd5c5c")
+        self.btn.setStyleSheet("background-color: #f13c73")
         self.btn.clicked.connect(self.beginWait)
 
     def beginWait(self):
