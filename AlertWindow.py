@@ -3,6 +3,7 @@
 
 from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QDesktopWidget
 from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt
 from Timer import Timer
 from datetime import timedelta
 from time import sleep
@@ -25,8 +26,12 @@ class AlertWindow(QWidget):
 
         self.resize(self.width, self.height)
         self.move(screenSize.width() - self.width, screenSize.height() - self.height - 50)
+
         self.setWindowTitle('Перерыв')
+
         self.setStyleSheet("background-color: #f16d95")
+
+        self.setWindowFlag(Qt.WindowStaysOnTopHint)
 
         self.font = QFont("Calibri", 14, QFont.Bold) 
         self.initLabel()
